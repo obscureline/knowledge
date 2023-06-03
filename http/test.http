@@ -1,0 +1,31 @@
+GET http://localhost:80
+Accept: application/json
+###
+
+POST http://localhost:80/hello
+Content-Type: application/x-www-form-urlencoded
+
+name=test
+> {%
+ client.test("hello", function() {
+   client.log("测试/hello接口");
+   client.log(response.body);
+   client.log(JSON.stringify(response.body)); // 虽然idea没有提示JSON，但是可以用
+   client.assert(response.status === 200, "返回码不是200");
+   client.assert(response.body === "hello would", "结果验证失败");
+ });
+%}
+###
+
+POST http://localhost:80/hellod
+
+> {%
+ client.test("hello", function() {
+   client.log("测试/hello接口");
+   client.log(response.body);
+   client.log(JSON.stringify(response.body)); // 虽然idea没有提示JSON，但是可以用
+   client.assert(response.status === 200, "返回码不是200");
+   client.assert(response.body === "hello would", "结果验证失败");
+ });
+%}
+###

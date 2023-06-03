@@ -1,10 +1,10 @@
-package com.obscureline.knowledge;
+package com.obscureline.knowledge.config;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
-@Slf4j
+@ComponentScan("com.obscureline.knowledge")
 @SpringBootApplication
 public class KnowledgeApplication {
 
