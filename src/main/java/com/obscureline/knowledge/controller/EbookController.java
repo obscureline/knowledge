@@ -1,25 +1,25 @@
 package com.obscureline.knowledge.controller;
 
 
-import com.obscureline.knowledge.service.TestService;
+import com.obscureline.knowledge.service.EbookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 测试 前端控制器
+ * 电子书 前端控制器
  * </p>
  *
  * @author jiangke
  * @since 2023-06-04
  */
-@RestController
-@RequestMapping("/test")
-public class TestController {
+@Controller
+@RequestMapping("/knowledge/ebook")
+public class EbookController {
 
     @Autowired
-    private TestService testService;
+    private EbookService ebookService;
 
 
 }
